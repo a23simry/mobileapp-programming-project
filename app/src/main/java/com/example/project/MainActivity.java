@@ -22,7 +22,7 @@ import java.util.List;
 @SuppressWarnings("FieldCanBeLocal")
 public class MainActivity extends AppCompatActivity implements JsonTask.JsonTaskListener{
 
-    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=brom";
+    private final String JSON_URL = "https://mobprog.webug.se/json-api?login=a23simry";
 
     private ArrayList<Plant> plantList = new ArrayList<>();
     private RecyclerView recyclerView;
@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
+        new JsonTask(this).execute(JSON_URL);
     }
 
     @Override
