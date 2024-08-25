@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">MaybeDangerousPlants</string>
     <string name="about_page">About</string>
+    <string name="web_page">Web</string>
 </resources>

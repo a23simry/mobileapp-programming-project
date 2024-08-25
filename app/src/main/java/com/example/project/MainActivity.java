@@ -52,6 +52,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         adapter = new RecyclerViewAdapter(this, plantList, new RecyclerViewAdapter.OnClickListener() {
             @Override
             public void onClick(Plant item) {
+                Intent intent = new Intent(MainActivity.this, WebActivity.class);
+                intent.putExtra("auxdata", item.getAuxdata());
+                startActivity(intent);
                 Toast.makeText(MainActivity.this, item.getName(), Toast.LENGTH_SHORT).show();
             }
         });
