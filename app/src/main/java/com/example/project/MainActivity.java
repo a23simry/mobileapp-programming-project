@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
         setSupportActionBar(toolbar);
 
 
+
         new JsonTask(this).execute(JSON_URL);
+
     }
 
     @Override
@@ -54,12 +56,12 @@ public class MainActivity extends AppCompatActivity implements JsonTask.JsonTask
             }
         });
 
-
-        adapter.notifyDataSetChanged();
-
         recyclerView = findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+
+        adapter.notifyDataSetChanged();
 
 
     }
