@@ -1,6 +1,5 @@
 
 # Rapport
-I detta projekt har jag:
 
 ## Skiss
 Figma lo-fi design av appens layout:
